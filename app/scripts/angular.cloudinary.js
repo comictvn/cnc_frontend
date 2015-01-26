@@ -1,0 +1,1 @@
+CLOUDINARY_CONFIG = {"api_key": "299677765263421", "cloud_name": "cnc"};

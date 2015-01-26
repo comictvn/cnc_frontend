@@ -1,0 +1,108 @@
+
+  <script type="text/javascript" src="fancy/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+  
+
+ <style type="text/css">
+    .page-template-detail {
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ), url('img/demo_detail/01.jpg') no-repeat center top fixed !important; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+       background-size: cover;
+    }
+  </style>
+    <div class="container-fluid demo details">
+      <div class="row header">
+        <div class="col-lg-5" style="text-align: left; padding-top: 10px; padding-left: 36px; margin-bottom: 30px">
+          <h1 style="font-size: 36px; height: 10%">{{template.name}}</h1>
+          <!-- <span style="font-family: 'VNF-Gotham'">Demo</span> -->
+        </div>
+        <div class="col-lg-3 col-lg-offset-4">
+          <div class="share">
+            <a href="{{template.demo}}" target="_blank">DEMO</a> |
+            <a href="">CHIA SẺ</a>
+          </div>
+          <div class="designer">
+            {{template.designer}} | {{template.created_at | date: 'dd-MM-yyyy'}}
+          </div>
+        </div>
+      </div>
+      <div class="row image">
+        <ul>
+          <li ng-repeat="image in template.images"><a class="fancybox-thumbs" ng-href="{{image.image_url}}" data-fancybox-group="gallery" fancybox><img  ng-src="{{image.image_url}}" alt="Image2"></a></li>
+        </ul>
+      </div>
+      <div class="row description">
+        <div class="col-lg-7" style="border-right: 1px solid #fff;">
+          <p>{{template.content}}</p>
+        <div class="btn_demo">
+          <button class="create">TẠO WEB <img src="img/icon_button.png"></button>
+        </div>
+          
+        </div>
+        <div class="col-lg-5 features">
+          <ul>
+            <li><span>Phong cách thiết kế</span> : Flat design</li>
+            <li><span>Công nghệ</span> : HTML5/CSS3</li>
+            <li><span>Sáng tạo</span> : 8/10</li>
+            <li><span>Tông màu chủ đạo</span> : ---</li>
+            <li><span>Tối ưu tìm kiếm</span> : 9/10</li>
+            <li><span>Xem trên thiết bị di động</span> : Yes</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="menu item navbar" role="navigation">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-11 col-lg-offset-1">
+          
+          
+          <div class="navbar-header">
+            <ul>
+              <li><a href="">DANH SÁCH DEMO</a></li>
+            </ul>
+            
+          </div>
+          <div class="navbar-collapse navbar-collapse1 ">
+            <ul class="nav navbar-nav">
+             
+              <li>
+                    <div class="hover">
+                      <a href="">DU LỊCH <i class="fa fa-angle-right"></i> {{template.name}}</a>
+                    </div> 
+                    <div class="mask">
+                      <a href="">DU LỊCH <i class="fa fa-angle-right"></i> {{template.name}}</a>
+                    </div> 
+              </li>
+              
+            </ul>
+            <ul style="float: right">
+              <li class="right">
+                    <div class="hover">
+                      <a href=""><i class="fa fa-angle-double-left"></i> QUAY LẠI</a>
+                    </div> 
+                    <div class="mask">
+                      <a href=""><i class="fa fa-angle-double-left"></i> QUAY LẠI</a>
+                    </div> 
+              </li>
+              <li>
+                    <div class="hover">
+                      <a href="">TIẾP THEO <i class="fa fa-angle-double-right"></i></a>
+                    </div> 
+                    <div class="mask">
+                      <a href="">TIẾP THEO <i class="fa fa-angle-double-right"></i></a>
+                    </div> 
+              </li>
+            </ul>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>

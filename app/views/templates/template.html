@@ -1,0 +1,112 @@
+<div class="container-fluid demo">
+      <div class="row header">
+        <div class="col-lg-2" style="text-align: left; padding-top: 10px; padding-left: 36px">
+          <a href=""><img src="img/logo_2.png"></a>
+        </div>
+        <div class="col-lg-2 col-lg-offset-8">
+          <h1>100</h1>
+          <span>Demo</span>
+        </div>
+      </div>
+
+      <div class="row slide_demo">
+        <div class="col-lg-12 slide_controller">
+          <div class="row">
+            <div class="col-lg-3 item" ng-repeat="template in templates">
+              <h3>{{$index +1 }}</h3>
+              <a href="">
+                <img ng-src="{{template.image_url}}" alt="Project 001">
+              </a>
+
+              <p class="designer">design by <a href="">{{template.designer}}</a> | {{template.created_at | date:'dd-MM-yyyy'}}</p>
+              <h4 ui-sref="template_detail({id: template.id})">{{template.name}}</h4>
+              <div class="description">
+                {{template.note}}
+              </div>
+              <div class="btn_demo">
+                <button class="view" >XEM <img src="img/icon_button.png"></button>
+                <button class="create">TẠO WEB <img src="img/icon_button.png"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu item navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-11 col-lg-offset-1">
+          
+          
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <ul>
+              <li><a href="">LĨNH VỰC</a></li>
+            </ul>
+            
+          </div>
+          <div class="navbar-collapse navbar-collapse1 collapse">
+            <ul class="nav navbar-nav">
+             
+              <li>
+                    <div class="hover">
+                      <a href="">THƯƠNG MẠI ĐIỆN TỬ</a>
+                    </div> 
+                    <div class="mask">
+                      <a href="">THƯƠNG MẠI ĐIỆN TỬ</a>
+                    </div> 
+              </li>
+              <li>
+                    <div class="hover">
+                      <a href="">TIN TỨC</a>
+                    </div> 
+                    <div class="mask">
+                      <a href="">TIN TỨC</a>
+                    </div> 
+              </li>
+              <li>
+                    <div class="hover">
+                      <a href="">GIỚI THIỆU CÔNG TY</a>
+                    </div> 
+                    <div class="mask">
+                      <a href="">GIỚI THIỆU CÔNG TY</a>
+                    </div> 
+              </li>
+              <li>
+                    <div class="hover">
+                      <a href="">DU LỊCH</a>
+                    </div> 
+                    <div class="mask">
+                      <a href="">DU LỊCH</a>
+                    </div> 
+              </li>
+              <li>
+                    <div class="hover">
+                      <a href="">BẤT ĐỘNG SẢN</a>
+                    </div> 
+                    <div class="mask">
+                      <a href="">BẤT ĐỘNG SẢN</a>
+                    </div> 
+              </li>
+              <li>
+                    <div class="hover">
+                      <a href="">NHÀ HÀNG KHÁCH SẠN</a>
+                    </div> 
+                    <div class="mask">
+                      <a href="">NHÀ HÀNG KHÁCH SẠN</a>
+                    </div> 
+              </li>
+            </ul>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/jquery.mousewheel.js"></script>
+    <script src="scripts/script.js"></script>
