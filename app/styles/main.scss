@@ -1,3 +1,7 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
   * { margin: 0; padding: 0; }
   /* Styling for the ngProgress itself */
 #ngProgress {
@@ -111,7 +115,52 @@
   }
 
   
-
+  .modal-login {
+    a {
+      color: #000;
+    }
+    .text-muted {
+      color: #90939a;
+    }
+    .btn-facebook {
+      color: #fff;
+      background-color: #3b5998;
+      border: 1px solid #335190;
+    }
+    btn:hover, .btn:focus {
+    color: #333;
+    text-decoration: none;
+    }
+    .btn-facebook:hover, .btn-facebook:focus {
+     color: #fff; 
+     background-color: #294786;
+    }
+    .btn { 
+      font-weight: bold;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+      }
+    input {
+      border-radius: 2px;
+    }
+    .signup-or-separator {
+      position: relative;
+      height: 34px;
+      text-align: center;
+      background: none;
+      .text {
+        display: inline-block;
+        padding: 8px;
+        margin: 0;
+        background-color: #fff;
+      }
+      hr {
+        width: 90%;
+        margin: -16px auto 10px auto;
+        border-top: 1px solid #dce0e0;
+      }
+    }
+  }
   .menu.navbar {
     margin-bottom: 0px;
   }
