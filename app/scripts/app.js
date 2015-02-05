@@ -18,7 +18,8 @@ var appcnc = angular.module('cncFrontendApp', [
     'AppFilter',
     'ngProgress',
     'myDirective',
-    'satellizer'
+    'satellizer',
+    'LocalStorageModule'
   ]);
 
 appcnc
@@ -30,6 +31,32 @@ appcnc
     $httpProvider.defaults.headers.common["Accept"] = "application/json";
     $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
 	}])
+	.config(['$httpProvider', function($httpProvider) {
+
+    var authInterceptor = ['localStorageService', '$q', '$location', function(localStorageService, $q, $location) {
+      return {
+        request: function request(req) {
+          req.headers = req.headers || {};
+          if (localStorageService.get('token')) {
+            req.headers.Authorization =
+            localStorageService.get('email') + ':' +
+            localStorageService.get('token');
+          }
+          return req || $q.when(req);
+        },
+        responseError: function responseError(res) {
+          if (res.status === 401) {
+            localStorageService.remove('email');
+            localStorageService.remove('token');
+            localStorageService.remove('uid');
+            $location.path('/');
+          }
+          return $q.reject(res);
+        }
+      };
+    }];
+    $httpProvider.interceptors.push(authInterceptor);
+  }])
 	.config(function($authProvider) {
 		$authProvider.facebook({
       clientId: '415033582006044'
